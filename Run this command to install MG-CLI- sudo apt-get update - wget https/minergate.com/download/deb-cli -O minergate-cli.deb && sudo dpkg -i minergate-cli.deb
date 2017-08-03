@@ -1,0 +1,27 @@
+from fresh installed VPS run this few simple commands to get the minergate client running.
+Run this command to install MG-CLI:
+sudo apt-get update && wget https://minergate.com/download/deb-cli -O minergate-cli.deb && sudo dpkg -i minergate-cli.deb
+
+to start miner (4 cores for XMR) use this command:
+
+minergate-cli -user <YOUR@EMAIL.KAPPA> -xmr 4 
+
+the portion -xmr is instruction which coin you want to mine
+4 is the number of cores you want to use. Leave it blank if you want the client to use all the cores(only if you want to use the whole VPS to mine )
+
+To run in it in screen mode (will allow you to terminate your SSH connectionwithout interupting the mining prosess) 
+
+apt-get install screen
+
+To verify that screen has been installed, run screen -v and you will see something similar to Screen version 4.02.01 (GNU) 28-Jul-17. You can also run which screen and it will show /usr/bin/screen.
+
+screen -S minergate  
+you may get greeted with a license page. Press "Return" or "Enter" to continue onward.
+
+minergate-cli -user <YOUR@EMAIL.KAPPA> -xmr 4
+
+the portion -xmr is instruction which coin you want to mine
+4 is the number of cores you want to use. Leave it blank if you want the client to use all the cores(only if you want to use the whole VPS to mine )
+
+If you think this simple instruction is usefull feel free to send some love to my donation bitcoin valet :) 
+13Ukb2rRTwxGk4R1upn1cPvGa1pa6vpEZe
